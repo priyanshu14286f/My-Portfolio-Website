@@ -15,20 +15,6 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-  if (isMenuOpen) {
-    
-    document.body.style.overflow = "hidden";
-  } else {
-    
-    document.body.style.overflow = "";
-  }
-
-  return () => {
-    document.body.style.overflow = "";
-  };
-  }, [isMenuOpen]);
-
-  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.screenY > 10);
     };
@@ -103,6 +89,7 @@ export const Navbar = () => {
   );
 
 };
+
 
 
 
